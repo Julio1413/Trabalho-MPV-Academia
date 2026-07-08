@@ -1,17 +1,19 @@
 import flet as ft
 from pathlib import Path
-import os, json
+import os
 from FitManager.pages import login,inicial
+from FitManager.Functions import usuario
 from FitManager.config import PASTA_TREINOS, PASTA_USUARIOS, ARQUIVO_USUARIO,JSON_USUARIOS,ARQUIVO_LISTA_TREINOS
 
 #Gerenciamento de login
-IR_PARA_LOGIN = False
+IR_PARA_LOGIN = None
 
 #Forçar a existência dos arquivos
 if not os.path.exists(os.path.join(PASTA_USUARIOS)):
     PASTA_USUARIOS.mkdir(exist_ok=True)
 if not os.path.exists(os.path.join(PASTA_TREINOS)):
-    PASTA_USUARIOS.mkdir(exist_ok=True)
+    PASTA_TREINOS.mkdir(exist_ok=True)
+
 
 
 if not os.path.exists(os.path.join(ARQUIVO_LISTA_TREINOS)):
@@ -27,14 +29,14 @@ if not os.path.exists(os.path.join(JSON_USUARIOS)):
     IR_PARA_LOGIN = True
 
 
-
-
+#Verifica a existência do usuario
+info_usuario = usuario.CarregarUsuario()
 
 def main(page:ft.Page):
     page.title="FitManager"
     page.bgcolor = ft.Colors.PURPLE_900
 
-    if IR_PARA_LOGIN ==True:login.login(page)
+    if not info_usuario or IR_PARA_LOGIN:login.login(page)
     else:inicial.home(page)
    
 

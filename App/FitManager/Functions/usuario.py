@@ -16,9 +16,12 @@ def CarregarUsuario():
     global usuario
     with open(os.path.join(ARQUIVO_USUARIO)) as f:
         info = json.loads(f.read())
-
-    usuario.nome = info['nome']
-    usuario.matricula = info['matricula']
+    try:
+        usuario.nome = info['nome']
+        usuario.matricula = info['matricula']
+        return {'nome':usuario.nome, 'matricula':usuario.matricula}
+    except:
+        return None
 
 def SalvarUsuario(nome_novo:None, matricula_nova=None):
     global usuario
