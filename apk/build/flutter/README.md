@@ -1,4 +1,4 @@
-# apk
+# FitManager
 
 
 
@@ -7,10 +7,10 @@
 * `fitmanager` - project identifier (lowercase, no spaces, i.e. "snake_case") used for bundle IDs and package names.
 * `` - project description.
 * `FitManager` - executable or bundle name on disk.
-* `apk` - display name shown in window titles and about app dialogs.
-* `com.mycompany` - org name in reverse domain name notation, e.g. `com.mycompany.myproject`.
-* `Flet` - the name of the company.
-* `Copyright (C) 2023-2026 by Flet` - the copyright notice.
+* `FitManager` - display name shown in window titles and about app dialogs.
+* `com.e404studios` - org name in reverse domain name notation, e.g. `com.mycompany.myproject`.
+* `404 Studios` - the name of the company.
+* `Copyright (C) 2026 by 404 Studios` - the copyright notice.
 
 ## Icons
 

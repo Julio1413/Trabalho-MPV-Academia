@@ -1,6 +1,6 @@
 [project]
 name = "FitManager"
-version = "0.1.0"
+version = "0.1.1"
 description = ""
 readme = "README.md"
 requires-python = ">=3.10"
@@ -20,10 +20,10 @@ dev = [
 
 [tool.flet]
 desktop_flavor = "light"    # Change to "full" to use flet-audio and flet-video
-org = "com.mycompany"
-product = "apk"
-company = "Flet"
-copyright = "Copyright (C) 2023-2026 by Flet"
+org = "com.e404studios"
+product = "FitManager"
+company = "404 Studios"
+copyright = "Copyright (C) 2026 by 404 Studios"
 
 [tool.flet.app]
 path = "src"

@@ -5,14 +5,12 @@ from ..pages import treino
 def home(page):
     page.clean()
     page.title='Home - FitManager'
-
     page.add(ui_tools.header(
         page=page,
-        texto='Home',
+        texto='Início',
         icone_direita=ft.Icons.HOME_ROUNDED,
         icone_esquerda=ft.Icons.FITNESS_CENTER_ROUNDED
     ))
-    page.add(ft.Placeholder(color=ft.Colors.TRANSPARENT,height=7))
 
     page.add(
         ft.Container(

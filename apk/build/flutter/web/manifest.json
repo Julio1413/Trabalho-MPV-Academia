@@ -1,5 +1,5 @@
 {
-    "name": "apk",
+    "name": "FitManager",
     "short_name": "fitmanager",
     "start_url": ".",
     "display": "standalone",

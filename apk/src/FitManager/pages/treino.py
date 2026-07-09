@@ -39,20 +39,25 @@ def treino_especifico(page, nome_treino, treino=None):
 
     controles_treino = []
     controles_treino.append(
-        ft.Row(
-            width=page.width,
-            height=60,
-            margin=-10,
-            alignment=ft.MainAxisAlignment.SPACE_AROUND,
+        ft.Column(
             controls=[
-                ft.IconButton(
-                    icon=ft.Icons.ARROW_BACK_IOS_ROUNDED,
-                    icon_color=ft.Colors.WHITE,
-                    on_click=lambda _: pagina_treinos(page),
+                ft.Container(height=24),
+                ft.Row(
+                    width=page.width,
+                    height=60,
+                    margin=-10,
+                    alignment=ft.MainAxisAlignment.SPACE_AROUND,
+                    controls=[
+                        ft.IconButton(
+                            icon=ft.Icons.ARROW_BACK_IOS_ROUNDED,
+                            icon_color=ft.Colors.WHITE,
+                            on_click=lambda _: pagina_treinos(page),
+                        ),
+                        ft.Text(value=nome_treino, weight=ft.FontWeight.BOLD, size=17),
+                        ft.Icon(icon=ft.Icons.FITNESS_CENTER_ROUNDED),
+                    ],
                 ),
-                ft.Text(value=nome_treino, weight=ft.FontWeight.BOLD, size=17),
-                ft.Icon(icon=ft.Icons.FITNESS_CENTER_ROUNDED),
-            ],
+            ]
         )
     )
 
@@ -97,15 +102,20 @@ def treino_especifico(page, nome_treino, treino=None):
 def pagina_treinos (page):
     page.clean()
     page.add(
-        ft.Row(
-        width=page.width,
-        height=60,
-        margin=-10,
-        alignment=ft.MainAxisAlignment.SPACE_AROUND,
-        controls=[
-            ft.IconButton(icon=ft.Icons.ARROW_BACK_IOS_ROUNDED,icon_color=ft.Colors.WHITE,on_click=lambda _:inicial.home(page)),
-            ft.Text(value="Treinos",weight=ft.FontWeight.BOLD,size=17),
-            ft.Icon(icon=ft.Icons.FITNESS_CENTER_ROUNDED),
+        ft.Column(
+            controls=[
+                ft.Container(height=24),
+                ft.Row(
+                    width=page.width,
+                    height=60,
+                    margin=-10,
+                    alignment=ft.MainAxisAlignment.SPACE_AROUND,
+                    controls=[
+                        ft.IconButton(icon=ft.Icons.ARROW_BACK_IOS_ROUNDED,icon_color=ft.Colors.WHITE,on_click=lambda _:inicial.home(page)),
+                        ft.Text(value="Treinos",weight=ft.FontWeight.BOLD,size=17),
+                        ft.Icon(icon=ft.Icons.FITNESS_CENTER_ROUNDED),
+                        ]
+                    ),
             ]
         )
     )

@@ -6,17 +6,23 @@ def header(
     icone_direita,
     icone_esquerda
 ):
-    return ft.Row(
-        width=page.width,
-        height=60,
-        margin=-10,
-        alignment=ft.MainAxisAlignment.SPACE_AROUND,
+    return ft.Column(
         controls=[
-            ft.Icon(icon=icone_direita),
-            ft.Text(value=texto,weight=ft.FontWeight.BOLD,size=17),
-            ft.Icon(icon=icone_esquerda),
-            ]
-        )
+            ft.Container(height=24),
+            ft.Row(
+                width=page.width,
+                height=60,
+                margin=-10,
+                alignment=ft.MainAxisAlignment.SPACE_AROUND,
+                controls=[
+                    ft.Icon(icon=icone_direita),
+                    ft.Text(value=texto,weight=ft.FontWeight.BOLD,size=17),
+                    ft.Icon(icon=icone_esquerda),
+                    ]
+                ),
+                ft.Placeholder(color=ft.Colors.TRANSPARENT,height=20)
+        ]
+    )
     
 def container(page, controles):
     return ft.Container(
